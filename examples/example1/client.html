@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>UI</title>
+    </head>
+    <body>
+	<span id='span_received_msg'></span>
+	</p>
+	<textarea id='txtArea' rows='10' columns='100'>xxx</textarea>
+	<button id='btnSend'>send</button>
+	<CANVAS id='acanvas' width='300' height='300'></CANVAS>
+	<script src="client.js">
+	
+	</script>
+        <script>
+	    var btnSend = document.getElementById('btnSend')
+	    btnSend.onclick = function(ev){
+		    //var dic ={};
+		    //dic["hello"] = "world";
+		    //var json = JSON.stringify(dic)
+		var txtArea = document.getElementById('txtArea');
+		wsclient.send_message_to_server(txtArea.value);	
+	    };
+	    /*
+            var ws = new WebSocket("ws://127.0.0.1:5678/");
+	    var txtArea = document.getElementById('txtArea')
+            ws.onmessage = function (event) {
+		//txtArea.value =  event.data;
+		txtArea.value = txtArea.value + ';'  + event.data;
+            };*/
+        </script>
+    </body>
+</html>
