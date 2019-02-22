@@ -11,7 +11,7 @@ An object Queue (https://docs.python.org/2/library/queue.html) can be shared by 
 
 Dependencies
 ============
-- python 3
+- python 3.6.8
 - websockets (https://pypi.org/project/websockets/)
 
 
