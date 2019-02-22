@@ -34,7 +34,7 @@ Besides de generator, the server is started with a queue object and the port num
 
     websoui.server.start_websocket_task(my_generator, received_msgs_queue, 5678)
 
-Even if the server will send everything that the generator yield, the idea is to send a json dictionary where the key of the dictionary will be the DOM element that should process the data and the content of the dictionary is the data.
+Even if the server will send everything that the generator yield, the idea is to send a json dictionary where the key of the dictionary will be the DOM element that will receive the data. The content of the dictionary is the data.
 
 
 .. code:: python
@@ -53,4 +53,6 @@ If we import the javascript code in our HTML and we start the websocket client l
 
 
 
-The javascript client will search automatically for a DOM object with ID 'html_id' and will try to show the content in it. At the moment, only SPAN, TEXTAREA, INPUT and CANVAS elements are supported. 
+The javascript client will search automatically for a DOM object with ID 'html_id' and will try to show the content in it. 
+
+At the moment, only SPAN, TEXTAREA, INPUT and CANVAS elements are supported. 
