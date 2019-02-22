@@ -48,7 +48,7 @@ if __name__ == '__main__':
     #We pass a reference of the queue to our generator when we create it.
     sample_generator = get_sample_generator(received_msgs_queue)
     if testing == False:
-        #We start the websocket server passing the generator and the queue.
+        #We start the websocket server passing the generator, the queue and the websocket port.
         server.start_websocket_task(sample_generator, received_msgs_queue, 5678)
     else:
         for sample in sample_generator:
