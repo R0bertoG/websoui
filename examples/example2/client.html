@@ -22,6 +22,7 @@
 		var txtArea = document.getElementById('txtArea');
 		wsclient.send_message_to_server(txtArea.value);	
 	    };
+	    wsclient.start_connection('ws://127.0.0.1:5678/');
 	    /*
             var ws = new WebSocket("ws://127.0.0.1:5678/");
 	    var txtArea = document.getElementById('txtArea')

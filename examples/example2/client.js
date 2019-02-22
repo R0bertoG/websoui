@@ -81,7 +81,7 @@ var wsclient = function(){
 
 }();
 
-wsclient.start_connection('ws://127.0.0.1:5678/');
+//wsclient.start_connection('ws://127.0.0.1:5678/');
 /*
 var f = function(data){
 	console.log(data);
