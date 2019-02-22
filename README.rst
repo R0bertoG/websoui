@@ -21,7 +21,7 @@ Installation
 .. code:: shell
 
     git clone https://github.com/R0bertoG/websoui
-    cd websoui
+    cd websoui/websoui
     python setup.py install 
 
 How it works
@@ -46,6 +46,7 @@ Even if the server will send everything that the generator yield, the idea is to
 If we import the javascript code in our HTML and we start the websocket client like this:
 
 	<script src="client.js"></script>
+
         <script>
 	    wsclient.start_connection('ws://127.0.0.1:5678/');
         </script>
