@@ -27,7 +27,7 @@ Installation
 How it works
 ============
 The server consume a generator, it's in this generator where the functionality that we wish should be implemented.
-The generator do whatever it's necessary and __yield__ what should be show in the UI.
+The generator do whatever it's necessary and **yield** what should be show in the UI.
 Besides de generator, the server is started with a queue object and the port number for the websocket.
 
 .. code:: python
