@@ -1,6 +1,6 @@
 Basics
 ======
-The aim of the project is to allow me to use the browser in the local computer as an interface to a python program.
+The aim of the project is to allow to use the browser in the local computer as an easy to use interface to a python program.
 
 This is done using a small python websockets server (server.py), an utilities module (dataformater.py) and a small javascript file (client.js).
 
@@ -11,8 +11,8 @@ An object Queue (https://docs.python.org/2/library/queue.html) can be shared by 
 
 Dependencies
 ============
--python 3
--websockets (https://pypi.org/project/websockets/)
+- python 3
+- websockets (https://pypi.org/project/websockets/)
 
 
 Installation
@@ -22,5 +22,6 @@ Installation
 .. code:: shell
 
     git clone https://github.com/R0bertoG/websoui
-     
-    
+    cd websoui
+    python setup.py install 
+
