@@ -45,11 +45,11 @@ Even if the server will send everything that the generator yield, the idea is to
 
 If we import the javascript code in our HTML and we start the websocket client like this:
 
-```html
+.. raw:: html
 	<script src="client.js"></script>
-         <script>
+        <script>
 	    wsclient.start_connection('ws://127.0.0.1:5678/');
-         </script>
-```
+        </script>
+
 
 The javascript client will search automatically for a DOM object with ID 'html_id' and will try to show the content in it. At the moment, only SPAN, TEXTAREA, INPUT and CANVAS elements are supported. 
