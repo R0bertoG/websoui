@@ -1,0 +1,9 @@
+setup.py
+websoui/__init__.py
+websoui/dataformater.py
+websoui/server.py
+websoui.egg-info/PKG-INFO
+websoui.egg-info/SOURCES.txt
+websoui.egg-info/dependency_links.txt
+websoui.egg-info/requires.txt
+websoui.egg-info/top_level.txt

@@ -23,13 +23,15 @@ def get_sample_generator(received_msgs_queue):
             else:
                 print(str(msg))
         data_dictionary = {}
-        #data_dictionary["span_received_msg"] = str(time.time())
         data_dictionary["span_received_msg"] = str(datetime.datetime.now()
                                                     .strftime("%Y-%m-%d %H:%M:%S"))
 
         img_path = 'images/' + str(img_number)  + '.png'
         img_base64 = dataformater.image_file_to_base64(img_path)
         data_dictionary["acanvas"] = img_base64
+        #An key in the dictionary without correspondence in the html, should be ignored
+        #by the client:
+        data_dictionary["test"] = "test content."
         #The generator yield whatever we want to send to the client.
         yield json.dumps(data_dictionary)
         time.sleep(1)
