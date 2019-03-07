@@ -2,12 +2,15 @@ Basics
 ======
 The aim of the project is to allow to use the browser in the local computer as an easy to use interface to a python program.
 
-This is done using a small python websockets server (server.py), an utilities module (dataformater.py) and a small javascript file (client.js).
+This is accomplished by stablishing a websocket connection between a python server (server.py) and the browser.
 
-This is accomplished by stablishing a websocket connection between a python server and the browser.
-The python server have to be initiated with a generator object (https://wiki.python.org/moin/Generators), every yield of the generator is send by the server to all the open connections. In the case of not opened connections availables the server stop the generator until, at least, one connection is stablished.
+There are three important files: a small python websockets server (server.py), an utilities module (dataformater.py) and a small javascript file (client.js).
 
-An object Queue (https://docs.python.org/2/library/queue.html) can be shared by the server and the generator. All the data sent by the browser will be feed to that queue, so all the information sent by the browser can be made available to the generator.
+The desired functionality of our python program must be implemented in a generator object (https://wiki.python.org/moin/Generators) that will yield, at the end of every iteration, the information that should be passed to the User Interface (UI). 
+Every yield of the generator is send by the server to all the open connections. In the case of not opened connections availables the server stop the generator until, at least, one connection is stablished.
+
+
+The python server have to be initiated with the generator object and an object Queue (https://docs.python.org/2/library/queue.html) that can be shared by the server and the generator. All the data sent by the browser will be feed to that queue, so all the information sent by the browser can be made available to the generator.
 
 Dependencies
 ============
