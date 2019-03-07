@@ -48,8 +48,12 @@ var wsclient = function(){
 				mapping_ID_to_function[key](event.data);
 				return;
 			};
-	    		var element = document.getElementById(key);
-			var element_type = element.nodeName;
+			try{
+	    			var element = document.getElementById(key);
+				var element_type = element.nodeName;
+			}catch(err){
+				return;
+			};
 			console.log("element type: ", element_type);
 			if (element_type in mapping_HTML_type_to_function){
 				mapping_HTML_type_to_function[element_type](element, obj[key]);
